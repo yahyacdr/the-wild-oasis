@@ -6,7 +6,7 @@ import { useRecentBookings } from "../features/dashboard/useRecentBookings";
 import Spinner from "../ui/Spinner";
 
 function Dashboard() {
-  const { bookings, isLoading } = useRecentBookings();
+  const { isLoading } = useRecentBookings();
 
   if (isLoading) return <Spinner />;
 
