@@ -31,8 +31,9 @@ import Pagination from "../../ui/Pagination";
 
 function BookingTable() {
   const { booking: bookings, count, isLoading } = useBookings();
+
   if (isLoading) return <Spinner />;
-  if (!bookings) return <Empty resource={"bookings"} />;
+  if (!bookings.length) return <Empty resource={"bookings"} />;
 
   // VIDEO stupid JS bug, just an example of course
   // null.toUpperCase();
