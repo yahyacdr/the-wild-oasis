@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// import DurationChart from "./DurationChart";
 // import SalesChart from "./SalesChart";
 // import Stats from "./Stats";
 // import TodayActivity from "../check-in-out/TodayActivity";
@@ -10,6 +9,7 @@ import { useRecentStays } from "./useRecentStays";
 import useCabins from "../cabins/useCabin";
 import Stats from "./Stats";
 import SalesChart from "./SalesChart";
+import DurationChart from "./DurationChart";
 
 const StyledDashboardLayout = styled.div`
   display: grid;
@@ -41,7 +41,7 @@ function DashboardLayout() {
       />
       <div>Statistics</div>
       <div>Today's activity</div>
-      <div>Chart stay durations</div>
+      <DurationChart confirmedStays={confirmedStays} />
       <SalesChart bookings={bookings} numDays={numDays} />
     </StyledDashboardLayout>
   );
